@@ -2,3 +2,4 @@
 <%= image_tag @artist.image_path %>
 <%= link_to "Edit Artist", edit_artist_path %>
 <%= link_to "Delete Artist", @artist, method: :delete, data: {confirm: "Are you sure you want to delete this artist?"} %>
+<%= link_to "New song", new_artist_song_path(@artist) %>
