@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "User views all artists"
+RSpec.feature "User views all artists" do
   scenario "they see the page for all artists" do
     # As a user
     # Given that artists exist in the database
@@ -14,7 +14,7 @@ RSpec.feature "User views all artists"
     expect(page).to have_content "Bob Marley"
     expect(page).to have_content "Bob Dylan"
     # And each name should link to that artist's individual page
-    expect(page).to have_css("a href=\"#{artist_path(marley)}\"")
-    expect(page).to have_css("a href=\"#{artist_path(dylan)}\"")
+    expect(page).to have_css("a[href=\"#{artist_path(marley)}\"]")
+    expect(page).to have_css("a[href=\"#{artist_path(dylan)}\"]")
   end
 end

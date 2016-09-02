@@ -1,0 +1,9 @@
+<%= form_for(@artist) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :image_path %>
+  <%= form.text_field :image_path %>
+
+  <%= form.submit %>
+<% end %>
