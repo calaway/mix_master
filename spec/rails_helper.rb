@@ -64,8 +64,4 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-# module TestHelpers
-#   def CreateMarley
-#
-#   end
-# end
+OmniAuth.config.test_mode = true
